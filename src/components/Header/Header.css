@@ -1,0 +1,83 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6vw 0;
+}
+
+.header-subsection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-subsection > :first-child {
+  margin-right: 4vw;
+}
+
+.header-subsection img {
+  width: 6vw;
+}
+
+header .sneakers-link img {
+  width: 100%;
+}
+
+header .open-cart {
+  position: relative;
+}
+
+header .items-in-cart {
+  position: absolute;
+  top: -20%;
+  right: -25%;
+  background-color: var(--orange);
+  color: white;
+  font-size: 0.55rem;
+  font-weight: bolder;
+  border-radius: 15px;
+  padding: 0px 6px;
+}
+
+.user-menu-overlay {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  z-index: 2;
+}
+
+.menu-slide {
+  transform: translateX(0%) !important;
+  transition: transform 0.5s;
+}
+
+@media (min-width: 375px) {
+  header {
+    padding: 2vw;
+    border-bottom: 2px solid var(--lightGrayishBlue);
+  }
+
+  .header-menu {
+    display: none;
+  }
+
+  .open-cart img {
+    width: 120%;
+    filter: brightness(0%);
+  }
+
+  .user-icon img {
+    width: 50%;
+  }
+
+  .header-subsection > :first-child {
+    margin-right: 2vw;
+  }
+
+  .user-menu-overlay {
+    display: none;
+  }
+}

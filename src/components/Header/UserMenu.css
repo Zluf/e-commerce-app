@@ -1,0 +1,41 @@
+.user-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 55%;
+  height: 100%;
+  padding: 6vw;
+  background-color: white;
+  z-index: 3;
+  transform: translateX(-100%);
+  /* transition: transform 0.5s; */
+}
+
+.user-menu * {
+  display: block;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+@media (min-width: 376px) {
+  .user-menu {
+    position: static;
+    display: flex;
+    justify-content: space-between;
+    width: 40vw;
+    transform: translateX(0%);
+    transition: none;
+    color: var(--darkGrayishBlue);
+    padding: 0;
+    animation: none;
+    z-index: 0;
+  }
+
+  .user-menu * {
+    margin-bottom: 0;
+  }
+
+  .user-menu button {
+    display: none;
+  }
+}

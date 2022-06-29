@@ -1,0 +1,36 @@
+.cart {
+  position: fixed;
+  top: 21vw;
+  width: 250px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 15px 42px -20px var(--darkGrayishBlue);
+}
+
+.cart > div {
+  padding: 5vw;
+}
+
+.cart-empty,
+.cart-content {
+  height: 200px;
+}
+
+.cart-title {
+  font-weight: bold;
+  border-bottom: 1px solid var(--lightGrayishBlue);
+}
+
+.cart-empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: var(--darkGrayishBlue);
+}
+
+.cart-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

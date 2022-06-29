@@ -1,0 +1,126 @@
+.slider-section {
+  position: relative;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+}
+
+/* CLOSE SLIDER BUTTON */
+
+.close-slider {
+  display: none;
+  position: absolute;
+  top: -7%;
+  right: 0;
+  width: 4%;
+  filter: invert();
+}
+.close-slider:hover {
+  filter: invert(68%) sepia(100%) saturate(3528%) hue-rotate(347deg)
+    brightness(101%) contrast(101%);
+}
+.close-slider img {
+  width: 100%;
+}
+
+/* SLIDER ITSELF */
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  /* display: flex; */
+  background-color: red;
+  margin-bottom: 8%;
+}
+
+.slider {
+  display: flex;
+  flex-wrap: nowrap;
+  transition: all 0.5s;
+  width: 400%;
+  pointer-events: none;
+}
+
+.slider img {
+  width: 25%;
+}
+
+/* SLIDER BUTTONS */
+
+.slide-buttons {
+  position: absolute;
+  top: calc(50% - 20px);
+  width: 90%;
+  /* transform: translateX(5%); */
+  z-index: 1;
+}
+
+.slide-buttons img {
+  height: 120%;
+  clip-path: polygon(0 50%, 0 10%, 75% 50%, 0 90%);
+}
+.slide-buttons img:hover {
+  filter: invert(68%) sepia(100%) saturate(3528%) hue-rotate(347deg)
+    brightness(101%) contrast(101%);
+}
+
+.slide-left,
+.slide-right {
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50px;
+}
+.slide-left img {
+  transform: translateX(10%);
+}
+.slide-right img {
+  transform: translateX(-12%) rotate(0.5turn);
+}
+
+.image-select {
+  display: none;
+}
+
+@media (min-width: 376px) {
+  .slider-section {
+    width: 40%;
+  }
+
+  .slider-container {
+    border-radius: 5%;
+  }
+
+  .slider {
+    width: 400%;
+    pointer-events: all;
+  }
+
+  .slider img {
+    width: 25%;
+  }
+
+  .slide-buttons {
+    display: none;
+    transform: translateY(-100%);
+    width: 110%;
+  }
+
+  .image-select {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .image-select img {
+    width: 20%;
+    border-radius: 15%;
+    cursor: pointer;
+    transition: all 0.5s;
+    border: 2px solid transparent;
+  }
+
+  .image-select img:hover {
+    border: 2px solid var(--orange);
+    opacity: 0.5;
+  }
+}

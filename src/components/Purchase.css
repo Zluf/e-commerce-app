@@ -1,0 +1,33 @@
+.purchase * {
+  font-weight: bold;
+}
+
+.set-amount {
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: var(--lightGrayishBlue);
+  box-sizing: border-box;
+  margin-bottom: 4vw;
+}
+
+.set-amount button {
+  background: none;
+  color: var(--orange);
+  font-weight: bold;
+  border: none;
+}
+
+.purchase .btn {
+  box-shadow: 0px 15px 32px -16px var(--orange);
+}
+
+.btn svg {
+  margin-right: 3vw;
+  fill: white;
+}
+
+@media (min-width: 376px) {
+  .set-amount {
+    margin-bottom: 0;
+  }
+}

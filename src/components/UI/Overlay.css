@@ -1,0 +1,13 @@
+.backdrop {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* pointer-events: none; */
+  background-color: rgba(128, 128, 128, 0.416);
+  z-index: 2;
+}

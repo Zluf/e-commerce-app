@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css?family=Kumbh+Sans:wght@400;700;900&display=swap");
+
+:root {
+  /* Colors */
+  --orange: hsl(26, 100%, 55%);
+  --paleOrange: hsl(25, 100%, 94%);
+  --veryDarkBlue: hsl(220, 13%, 13%);
+  --darkGrayishBlue: hsl(219, 9%, 45%);
+  --grayishBlue: hsl(220, 14%, 75%);
+  --lightGrayishBlue: hsl(223, 64%, 98%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%); /* (with 75% opacity for lightbox background) */
+  /* Font */
+  --smallText: 0.9rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  padding-left: 6vw;
+  padding-right: 6vw;
+}
+@media (min-width: 376px) {
+  .container {
+    padding-left: 0vw;
+    padding-right: 0vw;
+  }
+}
+
+.flex-sb-c {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-c-c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
