@@ -19,7 +19,7 @@ export default function CartItem(props) {
           Autumn Limited Edition Sneakers
         </div>
 
-        <div className="cart-item-summary-price-summary flex-">
+        <div className="cart-item-summary-price-summary">
           <div className="cart-item-summary-price">{`$${price}`}</div>
           <span>x</span>
           <div className="cart-item-summary-amount">{props.amountInCart}</div>

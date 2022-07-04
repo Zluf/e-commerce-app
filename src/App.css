@@ -8,17 +8,17 @@
 
 @media (min-width: 376px) {
   .app {
-    padding: 0 7vw;
+    padding: 0 11.3vw;
   }
 
   main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 4vw 6vw;
+    margin: 6vw 3vw;
   }
 
   .product-container {
-    width: 40%;
+    width: 45%;
   }
 }

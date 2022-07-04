@@ -14,6 +14,12 @@
   --smallText: 0.9rem;
 }
 
+@media (min-width: 376px) {
+  :root {
+    --smallText: 1rem;
+  }
+}
+
 a {
   text-decoration: none;
   color: inherit;

@@ -22,7 +22,7 @@
     position: static;
     display: flex;
     justify-content: space-between;
-    width: 40vw;
+    width: 27.5vw;
     transform: translateX(0%);
     transition: none;
     color: var(--darkGrayishBlue);
@@ -33,6 +33,16 @@
 
   .user-menu * {
     margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    font-size: 0.9.3rem;
+    font-weight: lighter;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s;
+  }
+  .user-menu *:hover {
+    color: black;
+    border-bottom: 2px solid var(--orange);
   }
 
   .user-menu button {

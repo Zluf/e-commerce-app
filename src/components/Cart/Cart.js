@@ -9,8 +9,12 @@ const Cart = (props) => {
   return (
     <React.Fragment>
       {ReactDOM.createPortal(
-        <Overlay onClick={props.onToggleCart}>
-          <div className="cart">
+        <div className="cart-container">
+          <Overlay
+            onClick={props.onToggleCart}
+            style={{ backgroundColor: "transparent" }}
+          />
+          <div className={`cart ${props.className}`}>
             <div className="cart-title">Cart</div>
 
             {!props.amountInCart && (
@@ -29,7 +33,7 @@ const Cart = (props) => {
               </div>
             )}
           </div>
-        </Overlay>,
+        </div>,
         document.getElementById("cart")
       )}
     </React.Fragment>

@@ -27,7 +27,26 @@
 }
 
 @media (min-width: 376px) {
+  .purchase {
+    display: flex;
+    justify-content: space-between;
+  }
+
   .set-amount {
     margin-bottom: 0;
+    width: 36%;
+    padding: 0 0.5rem;
+  }
+
+  .set-amount button {
+    opacity: 1;
+    transition: opacity 0.1s;
+  }
+  .set-amount button:hover {
+    opacity: 0.5;
+  }
+
+  .set-amount button img {
+    width: 70%;
   }
 }

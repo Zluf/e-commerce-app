@@ -57,6 +57,20 @@ p {
   }
 
   section * {
-    margin-bottom: 0vw;
+    margin-bottom: 2vw;
+  }
+
+  p {
+    line-height: 1.6rem;
+  }
+
+  .price {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 2vw;
+  }
+
+  .current-price {
+    margin-bottom: 1vw;
   }
 }

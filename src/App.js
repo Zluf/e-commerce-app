@@ -11,13 +11,19 @@ function App() {
   const [showCart, setShowCart] = React.useState(false);
   const [showSlider, setShowSlider] = React.useState(false);
   const [currentAmountInCart, setCurrentAmountInCart] = React.useState(0);
+  const [cartTransition, setCartTransition] = React.useState("");
 
   const showCartHandler = () => {
-    setShowCart(showCart ? false : true);
+    if (showCart === true) {
+      setCartTransition(false);
+      setTimeout(() => setShowCart(false), 300);
+    } else {
+      setShowCart(true);
+      setTimeout(() => setCartTransition(true), 100);
+    }
   };
 
   const showSliderHandler = () => {
-    console.log("boo");
     setShowSlider(showSlider ? false : true);
   };
 
@@ -36,6 +42,7 @@ function App() {
           onToggleCart={showCartHandler}
           onDelete={emptyCart}
           amountInCart={currentAmountInCart}
+          className={cartTransition ? "cart-slide" : ""}
         />
       )}
 

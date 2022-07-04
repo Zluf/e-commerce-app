@@ -5,29 +5,44 @@ header {
   padding: 6vw 0;
 }
 
-.header-subsection {
+.header__subsection {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.header-subsection > :first-child {
-  margin-right: 4vw;
-}
+/* 🔲 HEADER__SUBSECTION--LEFT  */
 
-.header-subsection img {
-  width: 6vw;
-}
-
-header .sneakers-link img {
+.header__sneakers-link img {
   width: 100%;
 }
 
-header .open-cart {
+.header__user-menu-btn {
+  margin-right: 4vw;
+}
+
+.header__open-cart {
   position: relative;
 }
 
-header .items-in-cart {
+.header__user-menu--overlay {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  z-index: 2;
+}
+
+.header__user-menu--slide {
+  transform: translateX(0%) !important;
+  transition: transform 0.5s;
+}
+
+/* 🔳 HEADER__SUBSECTION--RIGHT  */
+
+.header__items-in-cart {
   position: absolute;
   top: -20%;
   right: -25%;
@@ -39,45 +54,48 @@ header .items-in-cart {
   padding: 0px 6px;
 }
 
-.user-menu-overlay {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  position: absolute;
-  z-index: 2;
+.header__cart-btn {
+  margin-right: 6vw;
 }
 
-.menu-slide {
-  transform: translateX(0%) !important;
-  transition: transform 0.5s;
+.header__user-icon img {
+  width: 6vw;
 }
+
+/*  */
+/* DESKTOP */
+/*  */
 
 @media (min-width: 375px) {
   header {
-    padding: 2vw;
+    padding: 0;
+    height: 7.7vw;
     border-bottom: 2px solid var(--lightGrayishBlue);
   }
 
-  .header-menu {
+  .header__user-menu-btn {
     display: none;
   }
 
-  .open-cart img {
-    width: 120%;
-    filter: brightness(0%);
+  .header__sneakers-link {
+    margin-right: 4vw;
   }
 
-  .user-icon img {
-    width: 50%;
+  .header__cart-btn img {
+    width: 110%;
   }
 
-  .header-subsection > :first-child {
-    margin-right: 2vw;
+  .header__cart-btn {
+    /* .header__subsection > :first-child { */
+    /* width: 1.4vw; */
+    margin-right: 3.3vw;
   }
 
-  .user-menu-overlay {
+  .header__user-icon img {
+    width: 3.5vw;
+  }
+
+  .header__user-menu-overlay {
     display: none;
   }
 }

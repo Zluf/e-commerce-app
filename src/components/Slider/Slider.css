@@ -28,8 +28,6 @@
 .slider-container {
   position: relative;
   overflow: hidden;
-  /* display: flex; */
-  background-color: red;
   margin-bottom: 8%;
 }
 
@@ -84,7 +82,7 @@
 
 @media (min-width: 376px) {
   .slider-section {
-    width: 40%;
+    width: 45%;
   }
 
   .slider-container {
