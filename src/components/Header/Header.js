@@ -31,7 +31,11 @@ export default function Header(props) {
       </div>
 
       <div className="header__subsection header__subsection--right flex-sb-c">
-        <button className="header__cart-btn" onClick={props.onToggleCart}>
+        <button
+          className="header__cart-btn"
+          onClick={props.onToggleCart}
+          style={props.styleCartBtn}
+        >
           <img src={iconCart} alt="cart icon" />
           {props.amountInCart >= 1 && (
             <span className="header__items-in-cart">{props.amountInCart}</span>

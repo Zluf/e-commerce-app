@@ -73,6 +73,11 @@ header {
     border-bottom: 2px solid var(--lightGrayishBlue);
   }
 
+  .header__subsection--left {
+    transform: translateY(-1.2%);
+    height: 100%;
+  }
+
   .header__user-menu-btn {
     display: none;
   }
@@ -82,12 +87,11 @@ header {
   }
 
   .header__cart-btn img {
-    width: 110%;
+    width: 100%;
   }
 
   .header__cart-btn {
     /* .header__subsection > :first-child { */
-    /* width: 1.4vw; */
     margin-right: 3.3vw;
   }
 

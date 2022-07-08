@@ -1,4 +1,35 @@
-@import url("https://fonts.googleapis.com/css?family=Kumbh+Sans:wght@400;700;900&display=swap");
+@font-face {
+  font-family: KumbhSans-Regular;
+  src: url("fonts/KumbhSans-Regular.ttf");
+}
+@font-face {
+  font-family: KumbhSans-Medium;
+  src: url("fonts/KumbhSans-Medium.ttf");
+}
+@font-face {
+  font-family: KumbhSans-SemiBold;
+  src: url("fonts/KumbhSans-SemiBold.ttf");
+}
+@font-face {
+  font-family: KumbhSans-Bold;
+  src: url("fonts/KumbhSans-Bold.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "KumbhSans-Regular";
+}
+
+h2,
+h3,
+h4 {
+  font-family: "KumbhSans-Bold";
+}
+
+body {
+  position: relative;
+}
 
 :root {
   /* Colors */
@@ -11,9 +42,8 @@
   --white: hsl(0, 0%, 100%);
   --black: hsl(0, 0%, 0%); /* (with 75% opacity for lightbox background) */
   /* Font */
-  --smallText: 0.9rem;
+  --smallText: 0.95rem;
 }
-
 @media (min-width: 376px) {
   :root {
     --smallText: 1rem;
@@ -26,8 +56,8 @@ a {
 }
 
 .container {
-  padding-left: 6vw;
-  padding-right: 6vw;
+  padding-left: 6.4vw;
+  padding-right: 6.2vw;
 }
 @media (min-width: 376px) {
   .container {

@@ -1,76 +1,104 @@
 .product-description {
-  padding-top: 6vw;
+  padding-top: 6.2vw;
   padding-bottom: 6vw;
 }
 
-section * {
-  margin-bottom: 3vw;
-}
+/* INFO */
 
-h5 {
+.product-description__info h5 {
   text-transform: uppercase;
+  font-size: 0.75rem;
   color: var(--orange);
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.09rem;
+  margin-bottom: 3.5vw;
 }
 
-h2 {
-  font-weight: 900;
+.product-description__info h2 {
+  font-family: "KumbhSans-SemiBold";
+  font-size: 1.7rem;
+  line-height: 2rem;
+  margin-bottom: 4.1vw;
 }
 
-p {
+.product-description__info p {
   color: var(--darkGrayishBlue);
   line-height: 1.4rem;
   font-size: var(--smallText);
+  line-height: 1.58rem;
+  margin-bottom: 6.7vw;
 }
 
-.current-price span {
-  padding: 0.2rem 0.5rem;
+/* PRICE */
+
+.product-description__price--current {
+  margin-bottom: 0.6vw;
+}
+
+.product-description__price--current h2 {
+  letter-spacing: 1px;
+  font-family: "KumbhSans-SemiBold";
+  font-size: 1.7rem;
+}
+.product-description__price--current span {
+  padding: 0.2rem 0.5rem 0.1rem;
   margin-left: 1rem;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: bold;
   border-radius: 5px;
   background-color: var(--paleOrange);
   color: var(--orange);
+  font-family: "KumbhSans-Medium";
 }
 
-.old-price {
+.product-description__price--old {
   color: var(--grayishBlue);
   font-weight: bold;
   text-decoration: line-through;
+  font-family: "KumbhSans-Medium";
 }
 
-.test1 {
-  height: 300px;
-  background-color: black;
-}
+/* 🖥️🖥️🖥️🖥️ 🖥️🖥️*/
+/* 🖥️DESKTOP🖥️ */
+/* 🖥️🖥️🖥️🖥️ 🖥️🖥️*/
 
-.test1 .timg {
-  width: 100px;
-  height: 80px;
-  object-fit: cover;
-}
-
-@media (min-width: 376px) {
+@media (min-width: 375px) {
   .product-description {
     padding-top: 0;
     padding-bottom: 0;
   }
 
-  section * {
-    margin-bottom: 2vw;
+  /* 🖥️ INFO */
+
+  .product-description__info {
+    margin-bottom: 1.7vw;
   }
 
-  p {
-    line-height: 1.6rem;
+  .product-description__info h5 {
+    margin-bottom: 1.3vw;
   }
 
-  .price {
+  .product-description__info h2 {
+    font-family: "KumbhSans-Bold";
+    font-size: 2.7rem;
+    line-height: 3rem;
+    margin-bottom: 2.45vw;
+  }
+
+  .product-description__info p {
+    line-height: 1.62rem;
+    margin-bottom: 0;
+  }
+
+  /* 🖥️ PRICE */
+
+  .product-description__price {
     flex-direction: column;
     align-items: flex-start;
-    margin-bottom: 2vw;
+    margin-bottom: 2.5vw;
   }
 
-  .current-price {
-    margin-bottom: 1vw;
+  .product-description__price--current {
+    font-size: 1.15rem;
+    margin-bottom: 0.6vw;
   }
 }

@@ -9,21 +9,19 @@ export default function CartItem(props) {
   return (
     <div className="cart-item">
       <img
-        className="cart-item-photo"
+        className="cart-item__photo"
         src={productImages.imageProduct1}
         alt="trainers"
       />
 
-      <div className="cart-item-summary">
-        <div className="cart-item-summary-name">
-          Autumn Limited Edition Sneakers
-        </div>
+      <div className="cart-item__summary">
+        <div className="cart-item__name">Autumn Limited Edition Sneakers</div>
 
-        <div className="cart-item-summary-price-summary">
-          <div className="cart-item-summary-price">{`$${price}`}</div>
+        <div className="cart-item__price-summary">
+          <div className="cart-item__price--one">{`$${price}`}</div>
           <span>x</span>
-          <div className="cart-item-summary-amount">{props.amountInCart}</div>
-          <div className="cart-item-summary-total-price">{`$${(
+          <div className="cart-item__amount">{props.amountInCart}</div>
+          <div className="cart-item__price--total">{`$${(
             price * props.amountInCart
           ).toFixed(2)}`}</div>
         </div>

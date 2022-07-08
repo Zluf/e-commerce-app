@@ -2,28 +2,48 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 55%;
+  width: 54%;
   height: 100%;
-  padding: 6vw;
+  display: flex;
+  flex-direction: column;
+  padding: 6.5vw 6.4vw;
   background-color: white;
   z-index: 3;
   transform: translateX(-100%);
   /* transition: transform 0.5s; */
 }
 
-.user-menu * {
-  display: block;
-  margin-bottom: 20px;
-  font-weight: bold;
+.user-menu button {
+  width: fit-content;
+  margin-bottom: 49px;
 }
 
-@media (min-width: 376px) {
+.user-menu button img {
+  opacity: 0.5;
+}
+.user-menu button img:hover {
+  opacity: 1;
+}
+
+.user-menu a {
+  width: fit-content;
+  font-size: 1.1rem;
+  font-family: "KumbhSans-SemiBold";
+  margin-bottom: 23px;
+  transition: transform 0.3s;
+}
+
+.user-menu a:hover {
+  transform: translateX(10px);
+}
+
+@media (min-width: 375px) {
   .user-menu {
     position: static;
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
     width: 27.5vw;
-    transform: translateX(0%);
+    transform: translateX(0%) translateY(-2%);
     transition: none;
     color: var(--darkGrayishBlue);
     padding: 0;
@@ -31,18 +51,21 @@
     z-index: 0;
   }
 
-  .user-menu * {
+  .user-menu a {
     margin-bottom: 0;
     display: flex;
     align-items: center;
-    font-size: 0.9.3rem;
+    font-size: 0.95rem;
+    height: 100%;
+    font-family: "KumbhSans-Regular";
     font-weight: lighter;
     border-bottom: 2px solid transparent;
     transition: all 0.3s;
   }
-  .user-menu *:hover {
+  .user-menu a:hover {
     color: black;
-    border-bottom: 2px solid var(--orange);
+    border-bottom: 4px solid var(--orange);
+    transform: none;
   }
 
   .user-menu button {

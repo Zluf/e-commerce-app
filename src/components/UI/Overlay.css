@@ -1,5 +1,5 @@
 .backdrop {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
@@ -8,6 +8,12 @@
   justify-content: center;
   align-items: center;
   /* pointer-events: none; */
-  background-color: rgba(128, 128, 128, 0.416);
+  background-color: rgba(0, 0, 0, 0.75);
   z-index: 2;
 }
+
+/* @media (min-width: 375px) {
+  .backdrop {
+    align-items: baseline;
+  }
+} */

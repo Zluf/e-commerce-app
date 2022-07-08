@@ -51,6 +51,11 @@ function App() {
       <Header
         onToggleCart={showCartHandler}
         amountInCart={currentAmountInCart}
+        styleCartBtn={
+          showCart || currentAmountInCart > 0
+            ? { filter: "contrast(1000%)" }
+            : {}
+        }
       />
 
       <main>

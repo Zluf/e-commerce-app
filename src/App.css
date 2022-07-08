@@ -1,12 +1,6 @@
 @import url("common-styles.css");
 
-* {
-  margin: 0;
-  padding: 0;
-  font-family: "Kumbh Sans";
-}
-
-@media (min-width: 376px) {
+@media (min-width: 375px) {
   .app {
     padding: 0 11.3vw;
   }
@@ -14,11 +8,11 @@
   main {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin: 6vw 3vw;
+    padding: 6.2vw 3.4vw;
   }
 
   .product-container {
-    width: 45%;
+    width: 44%;
+    margin-top: 4.3vw;
   }
 }

@@ -1,0 +1,9 @@
+.slider--full-screen {
+  overflow: visible;
+  width: 38.3vw;
+  margin-top: 5.5vw;
+}
+
+.slider--full-screen__slide-buttons {
+  display: flex;
+}

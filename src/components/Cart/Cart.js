@@ -15,21 +15,21 @@ const Cart = (props) => {
             style={{ backgroundColor: "transparent" }}
           />
           <div className={`cart ${props.className}`}>
-            <div className="cart-title">Cart</div>
+            <h4 className="cart__title">Cart</h4>
 
             {!props.amountInCart && (
-              <div className="cart-empty">
+              <div className=" cart__content cart__content--empty">
                 <span>Your cart is empty.</span>
               </div>
             )}
 
             {props.amountInCart >= 1 && (
-              <div className="cart-content">
+              <div className="cart__content cart__content--full">
                 <CartItem
                   amountInCart={props.amountInCart}
                   onDelete={props.onDelete}
                 />
-                <Button>Checkout</Button>
+                <Button className="cart__btn--checkout">Checkout</Button>
               </div>
             )}
           </div>

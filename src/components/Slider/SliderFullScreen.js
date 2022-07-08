@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import "./SliderFullScreen.css";
 import Overlay from "../UI/Overlay.js";
 import Slider from "./Slider.js";
 
@@ -9,11 +10,10 @@ const SliderFullScreen = (props) => {
       {ReactDOM.createPortal(
         <Overlay>
           <Slider
-            styleCloseButton={{ display: "block" }}
+            classNameSlider="slider--full-screen"
+            classNameSlideButtons="slider--full-screen__slide-buttons"
             onCloseSlider={props.onCloseSlider}
-            styleSlideButtons={{
-              display: "flex",
-            }}
+            styleCloseButton={{ display: "block" }}
             styleImageSelect={{ width: "82%" }}
           />
         </Overlay>,
