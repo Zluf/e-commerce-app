@@ -44,26 +44,10 @@ body {
   /* Font */
   --smallText: 0.95rem;
 }
-@media (min-width: 376px) {
-  :root {
-    --smallText: 1rem;
-  }
-}
 
 a {
   text-decoration: none;
   color: inherit;
-}
-
-.container {
-  padding-left: 6.4vw;
-  padding-right: 6.2vw;
-}
-@media (min-width: 376px) {
-  .container {
-    padding-left: 0vw;
-    padding-right: 0vw;
-  }
 }
 
 .flex-sb-c {
@@ -82,4 +66,26 @@ button {
   cursor: pointer;
   border: none;
   background: none;
+}
+
+.container {
+  padding-left: 6.2vw;
+  padding-right: 6.4vw;
+}
+
+@media (min-width: 640px) {
+  :root {
+    --smallText: 1rem;
+  }
+  /* .container {
+    padding-left: 11.3vw;
+    padding-right: 11.3vw;
+  } */
+}
+
+@media (min-width: 1024px) {
+  /* .container {
+    padding-left: 0vw;
+    padding-right: 0vw;
+  } */
 }

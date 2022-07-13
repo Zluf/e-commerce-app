@@ -61,7 +61,7 @@
 /* 🖥️DESKTOP🖥️ */
 /* 🖥️🖥️🖥️🖥️ 🖥️🖥️*/
 
-@media (min-width: 375px) {
+@media (min-width: 640px) {
   .product-description {
     padding-top: 0;
     padding-bottom: 0;
@@ -74,14 +74,16 @@
   }
 
   .product-description__info h5 {
-    margin-bottom: 1.3vw;
+    font-size: 0.8rem;
+    letter-spacing: 0.11rem;
+    margin-bottom: 1.25vw;
   }
 
   .product-description__info h2 {
-    font-family: "KumbhSans-Bold";
+    font-family: "KumbhSans-SemiBold";
     font-size: 2.7rem;
     line-height: 3rem;
-    margin-bottom: 2.45vw;
+    margin-bottom: 2.48vw;
   }
 
   .product-description__info p {

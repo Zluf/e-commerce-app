@@ -2,26 +2,22 @@ import React from "react";
 import "./Slider.css";
 import productImages from "../../images/index.js";
 import prevIcon from "../../images/icon-previous.svg";
-// import { ReactComponent as PrevIcon } from "../../images/icon-previous.svg";
-// import { ReactComponent as NextIcon } from "../../images/icon-next.svg";
 import closeIcon from "../../images/icon-close.svg";
 
 const Slider = (props) => {
-  const [currentImage, setCurrentImage] = React.useState(0);
-
   const slideLeft = () => {
-    if (currentImage === 0) {
-      setCurrentImage(3);
+    if (props.currentImage === 0) {
+      props.onChangeImage(3);
     } else {
-      setCurrentImage(currentImage - 1);
+      props.onChangeImage(props.currentImage - 1);
     }
   };
 
   const slideRight = () => {
-    if (currentImage === 3) {
-      setCurrentImage(0);
+    if (props.currentImage === 3) {
+      props.onChangeImage(0);
     } else {
-      setCurrentImage(currentImage + 1);
+      props.onChangeImage(props.currentImage + 1);
     }
   };
 
@@ -39,7 +35,7 @@ const Slider = (props) => {
         <div
           className="slider__thread"
           onClick={props.onToggleSliderFullScreen}
-          style={{ transform: `translateX(-${25 * currentImage}%)` }}
+          style={{ transform: `translateX(-${25 * props.currentImage}%)` }}
         >
           {Object.values(productImages).map((img, i) => {
             return <img key={i} src={img} alt="trainers" />;
@@ -68,8 +64,9 @@ const Slider = (props) => {
         {Object.values(productImages).map((img, i) => {
           return (
             <div
+              key={i}
               style={
-                currentImage === i
+                props.currentImage === i
                   ? { border: "2px solid var(--orange)" }
                   : { border: "2px solid transparent" }
               }
@@ -77,13 +74,12 @@ const Slider = (props) => {
             >
               <img
                 onClick={() => {
-                  setCurrentImage(i);
+                  props.onChangeImage(i);
                 }}
-                key={i}
                 src={img}
                 alt="trainers photo"
                 className={`slider__slide ${
-                  currentImage === i && "slider__slide-img--selected"
+                  props.currentImage === i && "slider__slide-img--selected"
                 }`}
               />
             </div>

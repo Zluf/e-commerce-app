@@ -8,13 +8,15 @@ const SliderFullScreen = (props) => {
   return (
     <React.Fragment>
       {ReactDOM.createPortal(
-        <Overlay>
+        <Overlay className="overlay-toggle">
           <Slider
             classNameSlider="slider--full-screen"
             classNameSlideButtons="slider--full-screen__slide-buttons"
             onCloseSlider={props.onCloseSlider}
             styleCloseButton={{ display: "block" }}
             styleImageSelect={{ width: "82%" }}
+            currentImage={props.currentImage}
+            onChangeImage={props.onChangeImage}
           />
         </Overlay>,
         document.getElementById("slider-full-screen")

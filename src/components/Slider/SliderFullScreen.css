@@ -1,9 +1,24 @@
-.slider--full-screen {
-  overflow: visible;
-  width: 38.3vw;
-  margin-top: 5.5vw;
+.overlay-toggle {
+  display: none;
 }
 
-.slider--full-screen__slide-buttons {
-  display: flex;
+@media (min-width: 1024px) {
+  .overlay-toggle {
+    display: flex;
+  }
+  .slider--full-screen {
+    overflow: visible;
+    width: 38.3vw;
+    margin-top: 0vw;
+    margin-top: 3.2vw;
+  }
+
+  .slider--full-screen__slide-buttons {
+    display: flex;
+  }
+}
+@media (min-width: 1200px) {
+  .slider--full-screen {
+    margin-top: 3.2vw;
+  }
 }

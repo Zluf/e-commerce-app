@@ -14,7 +14,7 @@ export default function Header(props) {
   };
 
   return (
-    <header className="header container">
+    <header className="header">
       <div className="header__subsection header__subsection--left flex-sb-c">
         <button className="header__user-menu-btn" onClick={showMenuHandler}>
           <img src={iconMenu} alt="menu icon" />

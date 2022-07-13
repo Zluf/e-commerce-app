@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   align-content: center;
-  /* height: 80vw; */
+  height: 80vw;
   overflow: hidden;
 }
 
@@ -13,7 +13,7 @@
 .slider__close-btn {
   display: none;
   position: absolute;
-  top: -6%;
+  top: -6.5%;
   right: 0;
   width: 3.85%;
   filter: invert();
@@ -83,37 +83,35 @@
   display: none;
 }
 
-/*  */
-/* DESKTOP */
-/*  */
+/* ////// */
+/* TABLET */
+/* ////// */
 
-@media (min-width: 375px) {
+@media (min-width: 640px) {
   .slider {
-    width: 43.8%;
+    width: 100%;
     height: auto;
-    /* background-color: grey; */
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    overflow: visible;
   }
 
-  /* SLIDER ITSELF */
+  /* SLIDER ITSELF (TABLET) */
 
   .slider__container {
+    width: 70%;
     border-radius: 3.4%;
-    margin-bottom: 6.55%;
-  }
-
-  .slider__thread {
-    pointer-events: all;
   }
 
   .slider__thread img {
     width: 25%;
   }
 
-  /* SLIDER BUTTONS */
+  /* SLIDER BUTTONS (TABLET) */
 
   .slider__slide-buttons {
     display: none;
-    transform: translateY(-138%);
+    transform: translateY(-5.8vw);
     width: 110%;
   }
 
@@ -134,14 +132,74 @@
     transform: translateX(-12%) rotate(0.5turn);
   }
 
-  /* SLIDER IMAGE SELECT */
+  /* SLIDER IMAGE SELECT (TABLET) */
 
   .slider__image-select {
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 16%;
+  }
+
+  .slider__slide {
+    display: flex;
+    width: 100%;
+    border-radius: 15%;
+    cursor: pointer;
+    transition: all 0.5s;
+    overflow: hidden;
+  }
+
+  .slider__slide img {
+    width: 100%;
+  }
+
+  .slider__slide img:hover {
+    filter: contrast(35%) brightness(150%);
+  }
+
+  .slider__slide-img--selected {
+    filter: contrast(15%) brightness(170%);
+  }
+}
+
+/* /////// */
+/* DESKTOP */
+/* /////// */
+
+@media (min-width: 1024px) {
+  .slider {
+    width: 43.8%;
+    height: auto;
+    /* height: 100%; */
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+
+  .slider__thread {
+    pointer-events: all;
+  }
+
+  /* SLIDER ITSELF (DESKTOP) */
+
+  .slider__container {
+    width: 100%;
+    border-radius: 3.4%;
+    margin-bottom: 6.55%;
+  }
+
+  .slider__thread img {
+    width: 25%;
+  }
+
+  /* SLIDER IMAGE SELECT (DESKTOP) */
+
+  .slider__image-select {
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
     width: auto;
-    height: min-content;
-    /* background-color: black; */
   }
 
   .slider__slide {

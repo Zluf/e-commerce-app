@@ -1,18 +1,47 @@
 @import url("common-styles.css");
 
-@media (min-width: 375px) {
+.product-container {
+  padding: 0 6.2vw 87px 6.4vw;
+}
+
+@media (min-width: 640px) {
   .app {
-    padding: 0 11.3vw;
+    padding-left: 11.3vw;
+    padding-right: 11.3vw;
   }
 
   main {
-    display: flex;
-    justify-content: space-between;
-    padding: 6.2vw 3.4vw;
+    padding-top: 6.2vw;
+    padding-bottom: 6.2vw;
   }
 
   .product-container {
+    padding: 6.2vw 0;
+  }
+}
+
+/*  */
+/* TABLET */
+/*  */
+
+@media (min-width: 1024px) {
+  main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6.2vw 3.4vw;
+  }
+  .product-container {
     width: 44%;
-    margin-top: 4.3vw;
+    padding: 0 0;
+  }
+}
+
+@media (min-width: 1400px) {
+  main {
+    align-items: flex-start;
+  }
+  .product-container {
+    padding: 4.3vw 0;
   }
 }

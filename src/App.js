@@ -12,6 +12,7 @@ function App() {
   const [showSlider, setShowSlider] = React.useState(false);
   const [currentAmountInCart, setCurrentAmountInCart] = React.useState(0);
   const [cartTransition, setCartTransition] = React.useState("");
+  const [currentImage, setCurrentImage] = React.useState(0);
 
   const showCartHandler = () => {
     if (showCart === true) {
@@ -35,6 +36,10 @@ function App() {
     setCurrentAmountInCart(0);
   };
 
+  const changeImage = (slideNum) => {
+    setCurrentImage(slideNum);
+  };
+
   return (
     <div className="app">
       {showCart && (
@@ -46,7 +51,13 @@ function App() {
         />
       )}
 
-      {showSlider && <SliderFullScreen onCloseSlider={showSliderHandler} />}
+      {showSlider && (
+        <SliderFullScreen
+          currentImage={currentImage}
+          onChangeImage={changeImage}
+          onCloseSlider={showSliderHandler}
+        />
+      )}
 
       <Header
         onToggleCart={showCartHandler}
@@ -59,8 +70,12 @@ function App() {
       />
 
       <main>
-        <Slider onToggleSliderFullScreen={showSliderHandler} />
-        <div className="product-container container">
+        <Slider
+          onToggleSliderFullScreen={showSliderHandler}
+          currentImage={currentImage}
+          onChangeImage={changeImage}
+        />
+        <div className="product-container">
           <ProductDescription />
           <Purchase addToCart={addToCart} />
         </div>

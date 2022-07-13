@@ -7,13 +7,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* pointer-events: none; */
   background-color: rgba(0, 0, 0, 0.75);
   z-index: 2;
 }
-
-/* @media (min-width: 375px) {
-  .backdrop {
-    align-items: baseline;
-  }
-} */

@@ -2,7 +2,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 6vw 0;
+  padding: 18px 6.2vw 20px 6.4vw;
 }
 
 .header__subsection {
@@ -36,7 +36,7 @@ header {
 }
 
 .header__user-menu--slide {
-  transform: translateX(0%) !important;
+  transform: translateX(0) !important;
   transition: transform 0.5s;
 }
 
@@ -55,31 +55,22 @@ header {
 }
 
 .header__cart-btn {
-  margin-right: 6vw;
+  margin-right: 24px;
 }
 
 .header__user-icon img {
-  width: 6vw;
+  width: 24px;
 }
 
 /*  */
-/* DESKTOP */
+/* TABLET */
 /*  */
 
-@media (min-width: 375px) {
+@media (min-width: 640px) {
   header {
     padding: 0;
     height: 7.7vw;
     border-bottom: 2px solid var(--lightGrayishBlue);
-  }
-
-  .header__subsection--left {
-    transform: translateY(-1.2%);
-    height: 100%;
-  }
-
-  .header__user-menu-btn {
-    display: none;
   }
 
   .header__sneakers-link {
@@ -91,14 +82,22 @@ header {
   }
 
   .header__cart-btn {
-    /* .header__subsection > :first-child { */
     margin-right: 3.3vw;
   }
 
   .header__user-icon img {
     width: 3.5vw;
   }
+}
 
+@media (min-width: 1024px) {
+  .header__user-menu-btn {
+    display: none;
+  }
+  .header__subsection--left {
+    transform: translateY(-1.2%);
+    height: 100%;
+  }
   .header__user-menu-overlay {
     display: none;
   }

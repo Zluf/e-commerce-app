@@ -40,7 +40,7 @@
 /* 🖥️DESKTOP🖥️ */
 /* 🖥️🖥️🖥️🖥️ 🖥️🖥️*/
 
-@media (min-width: 375px) {
+@media (min-width: 640px) {
   .purchase {
     display: flex;
   }

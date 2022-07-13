@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 54%;
+  width: 200px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -37,7 +37,11 @@
   transform: translateX(10px);
 }
 
-@media (min-width: 375px) {
+/*  */
+/* TABLET */
+/*  */
+
+@media (min-width: 1024px) {
   .user-menu {
     position: static;
     flex-direction: row;
